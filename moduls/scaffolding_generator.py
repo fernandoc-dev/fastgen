@@ -36,6 +36,8 @@ class ScaffoldingGenerator:
         alembic_ini_content = f"""
 [alembic]
 script_location = {project_name}/migrations
+
+# IMPORTANT: Set the database URL here
 sqlalchemy.url = {db_url}
 
 [loggers]
