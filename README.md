@@ -27,5 +27,5 @@ This tool is designed to speed up the development of FastAPI applications by aut
 ## Installation
 
 Clone this repository and navigate to the project folder:
-<pre>bash git clone https://github.com/yourusername/fastapi-project-generator.git
-cd fastapi-project-generator</pre>
+<pre>```bash git clone https://github.com/yourusername/fastapi-project-generator.git
+cd fastapi-project-generator```</pre>
