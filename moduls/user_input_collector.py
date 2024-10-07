@@ -26,9 +26,12 @@ class UserInputCollector:
             if use_orm:
                 self._collect_orm_inputs()
 
-        # Collect versioning options
+        # Ask if the user wants API versioning
         self.settings.versioning = input("Would you like to use API versioning? (y/n): ").lower() == 'y'
-        self.settings.models_inside_versioning = input("Would you like to place models inside the versioned folder? (y/n): ").lower() == 'y'
+
+        # Only ask if the models will be inside the versioning folder if versioning is enabled
+        if self.settings.versioning:
+            self.settings.models_inside_versioning = input("Would you like to place models inside the versioned folder? (y/n): ").lower() == 'y'
 
     def _collect_database_inputs(self):
         print("Which relational database are you going to use?")
