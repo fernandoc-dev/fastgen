@@ -15,3 +15,4 @@ class ProjectSettings:
         self.orm_choice = None
         self.versioning = False
         self.models_inside_versioning = False
+        self.use_alembic = False
