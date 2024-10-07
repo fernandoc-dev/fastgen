@@ -26,6 +26,10 @@ class UserInputCollector:
             if use_orm:
                 self._collect_orm_inputs()
 
+            # Ask if the user wants to use Alembic for database migrations
+            use_alembic = input("Would you like to add Alembic for database migrations? (y/n): ").lower() == 'y'
+            self.settings.use_alembic = use_alembic
+
         # Ask if the user wants API versioning
         self.settings.versioning = input("Would you like to use API versioning? (y/n): ").lower() == 'y'
 

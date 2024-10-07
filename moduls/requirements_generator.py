@@ -20,5 +20,9 @@ class RequirementsGenerator:
         elif self.settings.db_choice == "MariaDB":
             requirements.append("mariadb")
 
+        # Add Alembic if the user opted for it
+        if self.settings.use_alembic:
+            requirements.append("alembic")
+
         with open(f"{self.settings.project_name}/requirements.txt", "w") as f:
             f.write("\n".join(requirements))
