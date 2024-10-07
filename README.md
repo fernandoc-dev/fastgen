@@ -33,7 +33,7 @@ cd fastapi-project-generator</pre>
 ## Usage
 
 Run the project generator script:
-<pre>python project_generator.py</pre>
+<pre>py main.py</pre>
 
 The script will interactively guide you through setting up your FastAPI project by asking the following questions:
 
