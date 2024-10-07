@@ -21,10 +21,10 @@ class UserInputCollector:
         if use_db:
             self._collect_database_inputs()
 
-        # Ask if the user wants to use an ORM
-        use_orm = input("Are you going to use an ORM? (y/n): ").lower() == 'y'
-        if use_orm:
-            self._collect_orm_inputs()
+            # Ask if the user wants to use an ORM only if a relational database is selected
+            use_orm = input("Are you going to use an ORM? (y/n): ").lower() == 'y'
+            if use_orm:
+                self._collect_orm_inputs()
 
         # Collect versioning options
         self.settings.versioning = input("Would you like to use API versioning? (y/n): ").lower() == 'y'
